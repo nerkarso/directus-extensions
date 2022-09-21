@@ -1,0 +1,11 @@
+{
+  "name": "directus-extensions",
+  "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0"
+  }
+}
