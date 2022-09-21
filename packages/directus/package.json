@@ -1,0 +1,19 @@
+{
+  "name": "directus",
+  "private": true,
+  "scripts": {
+    "start": "directus start",
+    "debug": "cross-env NODE_OPTIONS='--inspect' directus start",
+    "bootstrap": "directus bootstrap",
+    "db:update": "directus database migrate:latest"
+  },
+  "dependencies": {
+    "directus": "^9.18.0",
+    "directus-extension-firebase-messaging-operation": "workspace:*",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

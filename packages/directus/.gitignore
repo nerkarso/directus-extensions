@@ -1,0 +1,20 @@
+# node
+node_modules
+*.log*
+
+# misc
+.DS_Store
+
+# production
+build
+dist
+out
+
+# env
+.env*
+!.env.example
+
+# storage
+data.db
+uploads
+snapshots
