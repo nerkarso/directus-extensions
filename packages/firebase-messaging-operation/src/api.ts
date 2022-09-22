@@ -1,14 +1,10 @@
 import { defineOperationApi } from '@directus/extensions-sdk';
-import { AppOptions, cert, initializeApp } from 'firebase-admin/app';
+import { applicationDefault, AppOptions, initializeApp } from 'firebase-admin/app';
 import { getMessaging, Message } from 'firebase-admin/messaging';
 import { Options } from './_types';
 
 const firebaseOptions: AppOptions = {
-  credential: cert({
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY,
-  }),
+  credential: applicationDefault(),
 };
 
 // @ts-ignore

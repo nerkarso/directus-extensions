@@ -15,9 +15,7 @@ npm install directus-extension-firebase-messaging-operation
 2. Add these environment variables:
 
 ```sh
-FIREBASE_PROJECT_ID=""
-FIREBASE_CLIENT_EMAIL=""
-FIREBASE_PRIVATE_KEY=""
+GOOGLE_APPLICATION_CREDENTIALS="./google-services.json"
 ```
 
 ## Known Issues
