@@ -13,7 +13,7 @@ importers:
       mysql: ^2.18.1
       sqlite3: ^5.1.1
     dependencies:
-      directus: 9.18.0_typescript@4.8.3
+      directus: 9.18.0
       directus-extension-firebase-messaging-operation: link:../firebase-messaging-operation
       mysql: 2.18.1
       sqlite3: 5.1.1
@@ -30,6 +30,20 @@ importers:
       vue: ^3.2.39
     dependencies:
       firebase-admin: 11.0.1_@firebase+app-types@0.7.0
+    devDependencies:
+      '@directus/extensions-sdk': 9.18.0_typescript@4.8.3
+      '@types/node': 18.7.18
+      shared: link:../shared
+      typescript: 4.8.3
+      vue: 3.2.39
+
+  packages/mailer-operation:
+    specifiers:
+      '@directus/extensions-sdk': 9.18.0
+      '@types/node': ^18.7.18
+      shared: workspace:*
+      typescript: ^4.8.3
+      vue: ^3.2.39
     devDependencies:
       '@directus/extensions-sdk': 9.18.0_typescript@4.8.3
       '@types/node': 18.7.18
@@ -976,7 +990,7 @@ packages:
       node-exceptions: 4.0.1
     dev: false
 
-  /@directus/extensions-sdk/9.18.0_4hccpmctjmdsw3cyhzw2o5u42m:
+  /@directus/extensions-sdk/9.18.0_g25fn2ayecozds5ssd7q4pobcy:
     resolution: {integrity: sha512-GvOq0nbA8oeiqXkj/X0FULfEbXKdxZviMgrj0Y/0Hzu+FdYrc0tUA/oo2LVScFSjeE8wMXNJQEvhTRaAQ9JpSA==}
     engines: {node: '>=12.20.0'}
     hasBin: true
@@ -995,7 +1009,7 @@ packages:
       rollup: 2.79.0
       rollup-plugin-styles: 4.0.0_rollup@2.79.0
       rollup-plugin-terser: 7.0.2_rollup@2.79.0
-      rollup-plugin-typescript2: 0.31.2_ihkqvyh37tzxtjmovjyy2yrv7m
+      rollup-plugin-typescript2: 0.31.2_rollup@2.79.0
       rollup-plugin-vue: 6.0.0_@vue+compiler-sfc@3.2.39
     transitivePeerDependencies:
       - better-sqlite3
@@ -3291,7 +3305,7 @@ packages:
       path-type: 4.0.0
     dev: false
 
-  /directus/9.18.0_typescript@4.8.3:
+  /directus/9.18.0:
     resolution: {integrity: sha512-rbHOSqGDq5jF8Jt9Z50I+zXY9kC1BaszUGriUW1ia6WeQWvkjkIvzXfqp23AV0lfmySVVTsieanZDZlbtauI1g==}
     engines: {node: '>=12.20.0'}
     hasBin: true
@@ -3302,7 +3316,7 @@ packages:
       '@directus/drive-azure': 9.18.0
       '@directus/drive-gcs': 9.18.0
       '@directus/drive-s3': 9.18.0
-      '@directus/extensions-sdk': 9.18.0_4hccpmctjmdsw3cyhzw2o5u42m
+      '@directus/extensions-sdk': 9.18.0_g25fn2ayecozds5ssd7q4pobcy
       '@directus/format-title': 9.15.0
       '@directus/schema': 9.18.0_g25fn2ayecozds5ssd7q4pobcy
       '@directus/shared': 9.18.0_g25fn2ayecozds5ssd7q4pobcy
@@ -6941,6 +6955,22 @@ packages:
       rollup: 2.79.0
       tslib: 2.4.0
       typescript: 4.8.3
+    dev: true
+
+  /rollup-plugin-typescript2/0.31.2_rollup@2.79.0:
+    resolution: {integrity: sha512-hRwEYR1C8xDGVVMFJQdEVnNAeWRvpaY97g5mp3IeLnzhNXzSVq78Ye/BJ9PAaUfN4DXa/uDnqerifMOaMFY54Q==}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@yarn-tool/resolve-package': 1.0.47
+      find-cache-dir: 3.3.2
+      fs-extra: 10.1.0
+      resolve: 1.22.1
+      rollup: 2.79.0
+      tslib: 2.4.0
+    dev: false
 
   /rollup-plugin-vue/6.0.0_@vue+compiler-sfc@3.2.39:
     resolution: {integrity: sha512-oVvUd84d5u73M2HYM3XsMDLtZRIA/tw2U0dmHlXU2UWP5JARYHzh/U9vcxaN/x/9MrepY7VH3pHFeOhrWpxs/Q==}
@@ -7649,6 +7679,7 @@ packages:
     resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
