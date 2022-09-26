@@ -6,7 +6,7 @@ Custom operation to send emails. It uses the Directus Nodemailer service and pro
 
 ## Installation
 
-1. Install Node.js module:
+1. Install extension:
 
 ```sh
 npm install directus-extension-mailer-operation

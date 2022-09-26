@@ -6,7 +6,7 @@ Custom operation to send messages with Firebase.
 
 ## Installation
 
-1. Install Node.js module:
+1. Install extension:
 
 ```sh
 npm install directus-extension-firebase-messaging-operation
