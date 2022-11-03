@@ -22,6 +22,7 @@ export default defineOperationApi<Options>({
         title: options.title,
         body: options?.body ?? undefined,
         imageUrl: options?.imageUrl ?? undefined,
+        ...options?.notificationPayload,
       },
       data: options?.data ?? undefined,
     };

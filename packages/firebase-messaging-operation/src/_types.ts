@@ -11,4 +11,5 @@ export type Options = {
   data?: {
     [key: string]: string;
   };
+  notificationPayload: Record<string, string>;
 };

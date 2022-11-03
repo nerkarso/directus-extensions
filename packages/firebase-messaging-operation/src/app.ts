@@ -145,16 +145,16 @@ export default defineOperationApp({
         },
       },
       {
-        field: 'data',
-        name: 'Data',
+        field: 'notificationPayload',
+        name: 'Notification Payload',
         type: 'json',
         meta: {
           width: 'full',
           interface: 'input-code',
-          note: 'The data message payload. Send up to 4KB of custom key-value pairs.',
+          note: 'Extra keys available for building notification messages for iOS and Android.',
           options: {
             language: 'json',
-            placeholder: JSON.stringify({ foo: 'bar' }, null, 2),
+            placeholder: JSON.stringify({ sound: 'default' }, null, 2),
           },
         },
       },
