@@ -145,8 +145,8 @@ export default defineOperationApp({
         },
       },
       {
-        field: 'notificationPayload',
-        name: 'Notification Payload',
+        field: 'messagePayload',
+        name: 'Message Payload',
         type: 'json',
         meta: {
           width: 'full',
@@ -154,7 +154,24 @@ export default defineOperationApp({
           note: 'Extra keys available for building notification messages for iOS and Android.',
           options: {
             language: 'json',
-            placeholder: JSON.stringify({ sound: 'default' }, null, 2),
+            placeholder: JSON.stringify(
+              {
+                android: {
+                  notification: {
+                    sound: 'default',
+                  },
+                },
+                apns: {
+                  payload: {
+                    aps: {
+                      sound: 'default',
+                    },
+                  },
+                },
+              },
+              null,
+              2
+            ),
           },
         },
       },
