@@ -1,4 +1,4 @@
-![Banner](https://user-images.githubusercontent.com/522079/158864859-0fbeae62-9d7a-4619-b35e-f8fa5f68e0c8.png)
+<p align="center"><img alt="Directus Logo" src="https://user-images.githubusercontent.com/522079/158864859-0fbeae62-9d7a-4619-b35e-f8fa5f68e0c8.png"></p>
 
 # Directus Extensions
 
@@ -13,17 +13,17 @@ Collection of Directus extensions.
 npm install directus-extension-<extension-name>
 ```
 
-## Creating Extensions
+## Creating
 
 The easiest way to start developing extensions is to use the `create-directus-extension` utility:
 
 ```sh
-npm init directus-extension
+npx create-directus-extension
 ```
 
 After specifying the name of the extension, the type of the extension and the programming language you want to use, the utility will create a folder with the recommended file structure to create an extension.
 
-## Developing your Extension
+## Developing
 
 Use the `watch` script when developing your extension because it rebuilds your source code whenever a file has changed.
 
@@ -31,7 +31,7 @@ Use the `watch` script when developing your extension because it rebuilds your s
 npm run watch
 ```
 
-## Building your Extension
+## Building
 
 Before your extension can be used by Directus, it has to be built. If you used the `create-directus-extension` utility to scaffold your extension, building your extension is as easy as running:
 
@@ -39,10 +39,18 @@ Before your extension can be used by Directus, it has to be built. If you used t
 npm run build
 ```
 
-## Publishing your Extension
+## Publishing
 
-To make an extension available to all Directus users, you can publish the npm package created by `@directus/extensions-sdk` to the npm registry. Make sure the name of the package follows the naming convention for package extensions: `directus-extension-<extension-name>` or `@<scope>/directus-extension-<extension-name>`. `<extension-name>` has to be replaced with the name of your extension.
+1. Increment the version number in the `package.json` file.
+
+2. Build the package:
 
 ```sh
-npm publish -w directus-extension-<extension-name>
+npm run build
+```
+
+3. Publish the package:
+
+```sh
+npm publish --access=public
 ```

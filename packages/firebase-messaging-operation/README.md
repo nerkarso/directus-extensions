@@ -1,4 +1,4 @@
-![Banner](https://user-images.githubusercontent.com/522079/158864859-0fbeae62-9d7a-4619-b35e-f8fa5f68e0c8.png)
+<p align="center"><img alt="Directus Logo" src="https://user-images.githubusercontent.com/522079/158864859-0fbeae62-9d7a-4619-b35e-f8fa5f68e0c8.png"></p>
 
 # firebase-messaging-operation
 
@@ -16,24 +16,6 @@ npm install directus-extension-firebase-messaging-operation
 
 ```sh
 GOOGLE_APPLICATION_CREDENTIALS="./google-services.json"
-```
-
-## Publishing
-
-1. Increment the version number in the `package.json` file.
-
-2. Build the package:
-
-```sh
-npm run build -w directus-extension-firebase-messaging-operation
-```
-
-3. Remove `dist` from `.gitignore`.
-
-4. Publish the package:
-
-```sh
-npm publish -w directus-extension-firebase-messaging-operation
 ```
 
 ## Known Issues
