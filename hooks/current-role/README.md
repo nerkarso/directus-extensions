@@ -15,7 +15,7 @@ pnpm add directus-extension-current-role-hook
 
 2. Data attribute gets inject in the body element.
 
-![Screenshot 1](.screenshots/01.png)
+![Screenshot 1](https://github.com/nerkarso/directus-extensions/raw/master/hooks/current-role/.screenshots/01.png)
 
 1. Add your custom CSS:
 
