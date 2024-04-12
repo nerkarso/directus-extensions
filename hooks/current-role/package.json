@@ -2,7 +2,7 @@
   "name": "directus-extension-current-role-hook",
   "description": "This hook injects the current user role in the DOM",
   "icon": "extension",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": [
     "directus",
     "directus-extension",
