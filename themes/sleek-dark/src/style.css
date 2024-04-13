@@ -1,0 +1,19 @@
+:root {
+  /* Reduce button size */
+  --v-button-height: 2.75rem;
+  --v-button-padding: 1rem;
+}
+
+body.dark {
+  /* Invert button foreground on dark theme */
+  --v-button-color: #ffffff;
+  --v-button-color-hover: var(--v-button-color);
+}
+
+/* Remove background color */
+.public-view .logo {
+  background-color: transparent !important;
+}
+.module-bar-logo {
+  --project-color: transparent;
+}
