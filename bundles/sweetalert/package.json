@@ -1,0 +1,56 @@
+{
+  "name": "directus-extension-sweetalert-bundle",
+  "description": "Simple way to show a SweetAlert",
+  "icon": "extension",
+  "version": "0.1.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-bundle"
+  ],
+  "homepage": "https://github.com/nerkarso/directus-extensions/tree/master/bundles/sweetalert#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerkarso/directus-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nerkarso/directus-extensions/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "bundle",
+    "path": {
+      "app": "dist/app.js",
+      "api": "dist/api.js"
+    },
+    "entries": [
+      {
+        "type": "hook",
+        "name": "hook",
+        "source": "src/hook/index.ts"
+      },
+      {
+        "type": "interface",
+        "name": "interface",
+        "source": "src/interface/index.ts"
+      }
+    ],
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "add": "directus-extension add"
+  },
+  "devDependencies": {
+    "@directus/extensions": "^1.0.2",
+    "@directus/extensions-sdk": "11.0.2",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.21"
+  }
+}
