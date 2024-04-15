@@ -1,0 +1,45 @@
+{
+  "name": "directus-extension-spacer-interface",
+  "description": "Add empty spaces in your forms",
+  "icon": "extension",
+  "version": "0.1.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-interface"
+  ],
+  "homepage": "https://github.com/nerkarso/directus-extensions/tree/master/interfaces/spacer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerkarso/directus-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nerkarso/directus-extensions/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link"
+  },
+  "devDependencies": {
+    "@directus/extensions": "^1.0.2",
+    "@directus/extensions-sdk": "11.0.2",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.21"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
+  }
+}
