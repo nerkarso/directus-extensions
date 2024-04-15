@@ -2,7 +2,7 @@
   "name": "directus-extension-file-preview-endpoint",
   "description": "Preview files from an endpoint",
   "icon": "extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "directus",
     "directus-extension",
@@ -36,5 +36,10 @@
     "@directus/extensions-sdk": "11.0.2",
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
   }
 }
