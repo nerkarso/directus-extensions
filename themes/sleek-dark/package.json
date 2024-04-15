@@ -2,7 +2,7 @@
   "name": "directus-extension-sleek-dark-theme",
   "description": "Sleek dark theme for Directus",
   "icon": "extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "directus",
     "directus-extension",
