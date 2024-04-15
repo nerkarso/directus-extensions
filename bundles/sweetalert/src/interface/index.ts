@@ -2,7 +2,7 @@ import { defineInterface } from '@directus/extensions-sdk';
 import InterfaceComponent from './interface.vue';
 
 export default defineInterface({
-  id: 'sweetalert-button',
+  id: 'sweetalert:button',
   name: 'SweetAlert Button',
   icon: 'smart_button',
   description: 'Show a SweetAlert when clicking a button',
