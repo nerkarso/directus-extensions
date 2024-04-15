@@ -2,7 +2,7 @@
   "name": "directus-extension-mailer-operation",
   "description": "Custom operation to send emails with Nodemailer",
   "icon": "extension",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": [
     "directus",
     "directus-extension",
@@ -43,5 +43,10 @@
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5",
     "vue": "^3.4.21"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
   }
 }
