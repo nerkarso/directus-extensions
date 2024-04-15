@@ -1,6 +1,6 @@
-import { defineOperationApp } from '@directus/extensions-sdk';
+import { OperationAppConfig } from '@directus/extensions';
 
-export default defineOperationApp({
+const config: OperationAppConfig = {
   id: 'firebase:messaging',
   name: 'Firebase Cloud Messaging',
   icon: 'send',
@@ -177,4 +177,6 @@ export default defineOperationApp({
       },
     ];
   },
-});
+};
+
+export default config;

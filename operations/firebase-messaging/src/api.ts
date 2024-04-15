@@ -1,4 +1,4 @@
-import { defineOperationApi } from '@directus/extensions-sdk';
+import { OperationApiConfig } from '@directus/extensions';
 import { applicationDefault, AppOptions, initializeApp } from 'firebase-admin/app';
 import { getMessaging, Message } from 'firebase-admin/messaging';
 import { Options } from './_types';
@@ -13,7 +13,7 @@ const app = global.app || initializeApp(firebaseOptions);
 // Initialize Firebase Cloud Messaging
 const messaging = getMessaging(app);
 
-export default defineOperationApi<Options>({
+const config: OperationApiConfig<Options> = {
   id: 'firebase:messaging',
   // @ts-ignore
   handler: async (options) => {
@@ -75,4 +75,6 @@ export default defineOperationApi<Options>({
         return { error: { message: 'Invalid target option' } };
     }
   },
-});
+};
+
+export default config;
