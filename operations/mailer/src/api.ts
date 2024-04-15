@@ -1,7 +1,7 @@
-import { defineOperationApi } from '@directus/extensions-sdk';
+import { OperationApiConfig } from '@directus/extensions';
 import { Attachment, MailMessage, Options, StreamAttachment } from './_types';
 
-export default defineOperationApi<Options>({
+const config: OperationApiConfig<Options> = {
   id: 'mailer',
   // @ts-ignore
   handler: async (options, context) => {
@@ -81,4 +81,6 @@ export default defineOperationApi<Options>({
       return ex;
     }
   },
-});
+};
+
+export default config;

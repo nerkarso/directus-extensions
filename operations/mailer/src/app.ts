@@ -1,6 +1,6 @@
-import { defineOperationApp } from '@directus/extensions-sdk';
+import { OperationAppConfig } from '@directus/extensions';
 
-export default defineOperationApp({
+const config: OperationAppConfig = {
   id: 'mailer',
   name: 'Send Email',
   icon: 'attach_email',
@@ -179,4 +179,6 @@ export default defineOperationApp({
       },
     ];
   },
-});
+};
+
+export default config;

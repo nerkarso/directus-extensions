@@ -4,9 +4,9 @@
 
 Custom operation to send emails. It uses the Directus Nodemailer service and provides more options than the built-in mail operation.
 
-## Installation
+## Usage
 
-1. Install extension:
+1. Install the extension using a package manager or from the Marketplace:
 
 ```sh
 npm install directus-extension-mailer-operation
