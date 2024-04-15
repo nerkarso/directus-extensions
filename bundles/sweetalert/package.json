@@ -2,7 +2,7 @@
   "name": "directus-extension-sweetalert-bundle",
   "description": "Simple way to show a SweetAlert",
   "icon": "extension",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "keywords": [
     "directus",
     "directus-extension",

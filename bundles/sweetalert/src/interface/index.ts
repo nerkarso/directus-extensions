@@ -32,6 +32,7 @@ export default defineInterface({
       meta: {
         width: 'full',
         interface: 'input-code',
+        note: 'https://sweetalert2.github.io/#configuration',
         options: {
           language: 'json',
           placeholder: JSON.stringify(

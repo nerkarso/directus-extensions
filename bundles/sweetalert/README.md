@@ -22,5 +22,7 @@ CONTENT_SECURITY_POLICY_DIRECTIVES__SCRIPT_SRC="'self','unsafe-eval','unsafe-inl
 
 ## Configuration
 
+![Screenshot 2](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/bundles/sweetalert/.screenshots/02.png)
+
 > [!NOTE]
-> For more information, please refer to [SweetAlert2 documentation](https://sweetalert2.github.io).
+> For more information, please refer to [SweetAlert2 documentation](https://sweetalert2.github.io/#configuration).
