@@ -1,10 +1,10 @@
-<p align="center"><img alt="Directus Logo" src="https://user-images.githubusercontent.com/522079/158864859-0fbeae62-9d7a-4619-b35e-f8fa5f68e0c8.png"></p>
+<p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
 # sweetalert-bundle
 
 Simple way to show a SweetAlert.
 
-![Screenshot 1](https://github.com/nerkarso/directus-extensions/raw/master/bundles/sweetalert/.screenshots/01.png)
+![Screenshot 1](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/bundles/sweetalert/.screenshots/01.png)
 
 ## Usage
 
