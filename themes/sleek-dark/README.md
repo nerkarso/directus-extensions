@@ -11,5 +11,5 @@ Sleek dark theme for Directus.
 1. Install the extension using a package manager or from the Marketplace:
 
 ```sh
-pnpm add directus-extension-sleek-dark-theme
+npm install directus-extension-sleek-dark-theme
 ```

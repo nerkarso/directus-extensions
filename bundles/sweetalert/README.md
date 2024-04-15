@@ -11,7 +11,7 @@ Simple way to show a SweetAlert.
 1. Install the extension using a package manager or from the Marketplace:
 
 ```sh
-pnpm add directus-extension-sweetalert-bundle
+npm install directus-extension-sweetalert-bundle
 ```
 
 2. Add this to your `.env` file to allow CSP.

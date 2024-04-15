@@ -10,7 +10,7 @@ This is useful when you want to preview an image or PDF in the Live Preview.
 1. Install the extension using a package manager or from the Marketplace:
 
 ```sh
-pnpm add directus-extension-file-preview-endpoint
+npm install directus-extension-file-preview-endpoint
 ```
 
 2. Get the **Filename (Disk)** value of the file from the File Library.

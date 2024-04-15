@@ -10,7 +10,7 @@ This is useful when you want to apply custom CSS to a specific user or role.
 1. Install the extension using a package manager or from the Marketplace:
 
 ```sh
-pnpm add directus-extension-current-role-hook
+npm install directus-extension-current-role-hook
 ```
 
 2. Data attribute gets injected in the body element.
