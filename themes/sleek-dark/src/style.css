@@ -1,6 +1,4 @@
 :root {
-  /* Override normal background */
-  --theme--background-normal: var(--theme--background);
   /* Reduce button size */
   --v-button-height: 2.75rem;
   --v-button-padding: 1rem;
