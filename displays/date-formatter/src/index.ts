@@ -6,7 +6,7 @@ export default {
   icon: 'edit_calendar',
   description: 'Format your date',
   component: DisplayComponent,
-  types: ['date', 'datetime'],
+  types: ['date', 'dateTime', 'time', 'timestamp'],
   options: [
     {
       field: 'dateFormat',

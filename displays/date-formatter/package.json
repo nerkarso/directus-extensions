@@ -2,7 +2,7 @@
   "name": "directus-extension-date-formatter-display",
   "description": "Format your date",
   "icon": "extension",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": [
     "directus",
     "directus-extension",
