@@ -12,18 +12,22 @@
 
   <body class="bg-gray-900 text-white p-4">
     <template id="itemTemplate">
-      <a class="block bg-gray-700/40 p-6 rounded-3xl hover:scale-[101%] hover:bg-gray-700/60 transition duration-300">
-        <h2 class="name text-lg font-medium mb-1.5 capitalize">Extension Name</h2>
-        <p class="description text-sm text-gray-400 mb-3">This is the description of the extension</p>
-        <div class="flex items-center gap-4">
-          <div class="text-yellow-300 text-sm">
-            <span class="fa-solid fa-cube mr-2"></span><span class="version">1.0.0</span>
-          </div>
-          <div class="text-green-300 text-sm">
-            <span class="fa-solid fa-download mr-2"></span><span class="downloads">0</span>
-          </div>
-          <div class="text-cyan-300 text-sm capitalize">
-            <span class="fa-solid fa-plug mr-2"></span><span class="type">type</span>
+      <a
+        class="block bg-gray-700/40 rounded-3xl overflow-hidden hover:scale-[101%] hover:bg-gray-700/60 transition duration-300"
+      >
+        <div class="px-6 pt-6">
+          <h2 class="name text-lg font-medium mb-1.5 capitalize">Extension Name</h2>
+          <p class="description text-sm text-gray-400 mb-3">This is the description of the extension</p>
+          <div class="flex items-center gap-4 mb-1.5">
+            <div class="text-green-300 text-sm">
+              <span class="fa-solid fa-download mr-2"></span><span class="downloads">0</span>
+            </div>
+            <div class="text-yellow-300 text-sm">
+              <span class="fa-solid fa-cube mr-2"></span><span class="version">1.0.0</span>
+            </div>
+            <div class="text-cyan-300 text-sm capitalize">
+              <span class="fa-solid fa-plug mr-2"></span><span class="type">type</span>
+            </div>
           </div>
         </div>
         <div class="chart"></div>

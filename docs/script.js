@@ -42,8 +42,8 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
         itemElem.querySelector('a').href = `https://www.npmjs.com/package/${item.name}`;
         itemElem.querySelector('.name').textContent = item.name.replace('directus-extension', '').replaceAll('-', ' ');
         itemElem.querySelector('.description').textContent = item.description;
-        itemElem.querySelector('.version').textContent = `v${itemDetails?.versions?.[0]?.version ?? '0.0.0'}`;
         itemElem.querySelector('.downloads').textContent = item.total_downloads;
+        itemElem.querySelector('.version').textContent = `v${itemDetails?.versions?.[0]?.version ?? '0.0.0'}`;
         itemElem.querySelector('.type').textContent = item.type;
 
         const chart = new ApexCharts(itemElem.querySelector('.chart'), {
@@ -58,6 +58,7 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
             zoom: { enabled: false },
             sparkline: { enabled: true },
           },
+          colors: ['#86efac'],
           dataLabels: { enabled: false },
           series: [
             {
@@ -67,6 +68,7 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
           ],
           stroke: {
             curve: 'monotoneCubic',
+            color: '#86efac',
             lineCap: 'butt',
             width: 1.5,
           },
