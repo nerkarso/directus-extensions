@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directus Extensions</title>
+    <link rel="icon" href="https://directus.io/apple-touch-icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white p-4">
+    <template id="itemTemplate">
+      <a class="block bg-gray-700/40 p-6 rounded-3xl hover:scale-[101%] hover:bg-gray-700/60 transition duration-300">
+        <h2 class="name text-lg font-medium mb-1.5 capitalize">Extension Name</h2>
+        <p class="description text-sm text-gray-400 mb-3">This is the description of the extension</p>
+        <div class="flex items-center gap-4">
+          <div class="text-yellow-300 text-sm">
+            <span class="fa-solid fa-cube mr-2"></span><span class="version">1.0.0</span>
+          </div>
+          <div class="text-green-300 text-sm">
+            <span class="fa-solid fa-download mr-2"></span><span class="downloads">0</span>
+          </div>
+          <div class="text-cyan-300 text-sm capitalize">
+            <span class="fa-solid fa-plug mr-2"></span><span class="type">type</span>
+          </div>
+        </div>
+      </a>
+    </template>
+
+    <template id="itemsEmptyTemplate">
+      <div class="text-xl text-center text-gray-400 py-12">Nothing to see here</div>
+    </template>
+
+    <template id="spinnerTemplate">
+      <div class="grid place-items-center py-12">
+        <span class="fa-solid fa-spinner animate-spin text-blue-300 text-3xl"></span>
+      </div>
+    </template>
+
+    <header
+      class="sticky top-4 bg-gray-700/40 backdrop-blur-xl p-6 rounded-3xl z-10 shadow-md flex items-center justify-between gap-4"
+    >
+      <a href="https://github.com/nerkarso/directus-extensions" class="text-blue-300">nerkarso/directus-extensions</a>
+      <div><span class="fa-solid fa-cubes mr-2"></span><span id="itemsTotalContainer">0</span></div>
+    </header>
+
+    <main id="itemsContainer" class="grid grid-cols-[repeat(auto-fit,minmax(min(25rem,100%),1fr))] gap-4 mt-4"></main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
