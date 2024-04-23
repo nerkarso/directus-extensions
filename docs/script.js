@@ -21,12 +21,12 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
       return;
     }
 
-    // Get version of all items
-    const versions = await Promise.allSettled(
+    // Get details of all items
+    const details = await Promise.allSettled(
       data.map((item) => {
         return fetch(`${API_URL}/${item.id}`)
           .then((response) => response.json())
-          .then(({ data }) => data?.versions?.[0]?.version);
+          .then(({ data }) => data);
       })
     );
 
@@ -37,15 +37,46 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
       ?.sort((a, b) => (a.total_downloads < b.total_downloads ? 1 : -1))
       .forEach((item, index) => {
         const itemElem = itemTemplate.content.cloneNode(true);
+        const itemDetails = details[index].value;
 
         itemElem.querySelector('a').href = `https://www.npmjs.com/package/${item.name}`;
         itemElem.querySelector('.name').textContent = item.name.replace('directus-extension', '').replaceAll('-', ' ');
         itemElem.querySelector('.description').textContent = item.description;
-        itemElem.querySelector('.version').textContent = versions[index].value ?? '--';
+        itemElem.querySelector('.version').textContent = `v${itemDetails?.versions?.[0]?.version ?? '0.0.0'}`;
         itemElem.querySelector('.downloads').textContent = item.total_downloads;
         itemElem.querySelector('.type').textContent = item.type;
 
+        const chart = new ApexCharts(itemElem.querySelector('.chart'), {
+          chart: {
+            type: 'area',
+            width: '100%',
+            height: '30rem',
+            animations: { enabled: false },
+            dropShadow: { enabled: false },
+            toolbar: { show: false },
+            selection: { enabled: false },
+            zoom: { enabled: false },
+            sparkline: { enabled: true },
+          },
+          dataLabels: { enabled: false },
+          series: [
+            {
+              name: 'downloads',
+              data: itemDetails.downloads.map(({ count }) => count),
+            },
+          ],
+          stroke: {
+            curve: 'monotoneCubic',
+            lineCap: 'butt',
+            width: 1.5,
+          },
+          tooltip: { enabled: false },
+        });
+
         itemsContainer.appendChild(itemElem);
+
+        // Wait to render the chart to calculate the correct width
+        setTimeout(() => chart.render(), 10);
       });
   })
   .catch((error) => {
