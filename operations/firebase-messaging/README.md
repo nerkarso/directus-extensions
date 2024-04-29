@@ -4,6 +4,10 @@
 
 Custom operation to send messages with Firebase.
 
+![Screenshot 1](.screenshots/01.jpeg)
+![Screenshot 2](.screenshots/02.jpeg)
+![Screenshot 3](.screenshots/03.jpeg)
+
 ## Usage
 
 1. Install the extension using a package manager or from the Marketplace:
