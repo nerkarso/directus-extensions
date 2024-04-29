@@ -2,7 +2,7 @@
   "name": "directus-extension-date-formatter-display",
   "description": "Format your date",
   "icon": "extension",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "keywords": [
     "directus",
     "directus-extension",
@@ -38,5 +38,10 @@
     "@directus/extensions-sdk": "11.0.3",
     "typescript": "^5.4.5",
     "vue": "^3.4.23"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
   }
 }
