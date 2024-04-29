@@ -13,11 +13,13 @@ This is useful when you want to apply custom CSS to a specific user or role.
 npm install directus-extension-current-role-hook
 ```
 
-2. Data attribute gets injected in the body element.
+2. Restart Directus.
+
+3. Data attribute gets injected in the body element.
 
 ![Screenshot 1](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/hooks/current-role/.screenshots/01.png)
 
-3. Add your custom CSS:
+4. Add your custom CSS:
 
 ```css
 body[data-user-id="..."] {
@@ -28,3 +30,7 @@ body[data-user-role="..."] {
   /* custom css */
 }
 ```
+
+## Known Issues
+
+- After installing the extension, you'll have to restart Directus for the extension to work.
