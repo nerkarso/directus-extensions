@@ -58,7 +58,7 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
             zoom: { enabled: false },
             sparkline: { enabled: true },
           },
-          colors: ['#86efac'],
+          colors: ['#60a5fa'],
           dataLabels: { enabled: false },
           series: [
             {
@@ -67,9 +67,6 @@ fetch(`${API_URL}?limit=10&by=350fb99f-218d-40b1-aaaf-98baa9f1751c`)
             },
           ],
           stroke: {
-            curve: 'monotoneCubic',
-            color: '#86efac',
-            lineCap: 'butt',
             width: 1.5,
           },
           tooltip: { enabled: false },
