@@ -13,3 +13,7 @@ Format your date.
 ```sh
 npm install directus-extension-date-formatter-display
 ```
+
+## Contributors
+
+- [RochRS](https://github.com/RochRS)
