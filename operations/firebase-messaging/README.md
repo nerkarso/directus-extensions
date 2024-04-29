@@ -4,9 +4,9 @@
 
 Custom operation to send messages with Firebase.
 
-![Screenshot 1](.screenshots/01.jpeg)
-![Screenshot 2](.screenshots/02.jpeg)
-![Screenshot 3](.screenshots/03.jpeg)
+![Screenshot 1](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/operations/firebase-messaging/.screenshots/01.jpeg)
+![Screenshot 2](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/operations/firebase-messaging/.screenshots/02.jpeg)
+![Screenshot 3](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/operations/firebase-messaging/.screenshots/03.jpeg)
 
 ## Usage
 
