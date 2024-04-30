@@ -26,9 +26,7 @@ const config: OperationApiConfig<Options> = {
       let streamAttachments: StreamAttachment[] = new Array();
 
       // Resolve all streams to an array
-      streamAttachments = await Promise.all(
-        fileIds.map((id) => assetsService.getAsset(id, {}))
-      );
+      streamAttachments = await Promise.all(fileIds.map((id) => assetsService.getAsset(id, {})));
 
       // Create attachment objects from streams
       streamAttachments.forEach((asset) => {
@@ -55,10 +53,7 @@ const config: OperationApiConfig<Options> = {
       if (payload.replyTo) mail.replyTo = payload.replyTo;
       if (payload.subject) mail.subject = payload.subject;
 
-      const safeBody =
-        typeof payload.body !== 'string'
-          ? JSON.stringify(payload.body)
-          : payload.body;
+      const safeBody = typeof payload.body !== 'string' ? JSON.stringify(payload.body) : payload.body;
 
       if (payload.type === 'template') {
         mail.template = {
