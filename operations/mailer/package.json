@@ -37,13 +37,15 @@
     "watch": "directus-extension build -w --no-minify",
     "link": "directus-extension link"
   },
+  "dependencies": {
+    "marked": "^12.0.2",
+    "sanitize-html": "^2.13.0"
+  },
   "devDependencies": {
     "@directus/extensions": "^1.0.2",
     "@directus/extensions-sdk": "11.0.2",
     "@types/node": "^20.12.7",
     "@types/sanitize-html": "^2.11.0",
-    "marked": "^12.0.2",
-    "sanitize-html": "^2.13.0",
     "typescript": "^5.4.5",
     "vue": "^3.4.21"
   },
