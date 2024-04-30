@@ -34,6 +34,8 @@ export interface Options extends MailFields {
   template: string;
   data?: Record<string, any>;
   files?: string[];
+  type: 'wysiwyg' | 'markdown' | 'template';
+  body?: string;
   attachments?: {
     filename: string;
     path: string;

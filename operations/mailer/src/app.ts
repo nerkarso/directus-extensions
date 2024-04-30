@@ -101,12 +101,41 @@ const config: OperationAppConfig = {
         },
       },
       {
+        field: 'type',
+        name: 'Type',
+        type: 'string',
+        schema: {
+          default_value: 'markdown',
+        },
+        meta: {
+          interface: 'select-dropdown',
+          width: 'half',
+          options: {
+            choices: [
+              {
+                text: 'Markdown',
+                value: 'markdown',
+              },
+              {
+                text: 'wysiwyg',
+                value: 'wysiwyg',
+              },
+              {
+                text: 'Template',
+                value: 'template',
+              },
+            ],
+          },
+        },
+      },
+      {
         field: 'template',
         name: 'Template',
         type: 'string',
         meta: {
-          width: 'full',
           interface: 'input',
+          hidden: panel.type !== 'template',
+          width: 'half',
           note: 'Name of the template to be used for the email. Custom email templates are stored in the templates folder in Directus extensions folder.',
           options: {
             placeholder: 'newsletter',
@@ -114,10 +143,24 @@ const config: OperationAppConfig = {
         },
       },
       {
+        field: 'body',
+        name: 'Body',
+        type: 'text',
+        meta: {
+          width: 'full',
+          interface:
+            panel.type === 'wysiwyg'
+              ? 'input-rich-text-html'
+              : 'input-rich-text-md',
+          hidden: panel.type === 'template',
+        },
+      },
+      {
         field: 'data',
         name: 'Data',
         type: 'json',
         meta: {
+          hidden: panel.type !== 'template',
           width: 'full',
           interface: 'input-code',
           note: 'Data to be used in the template.',
