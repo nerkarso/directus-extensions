@@ -18,3 +18,7 @@ npm install directus-extension-mailer-operation
 ## Credits
 
 Part of the source code is borrowed from [Directus Mailer](https://github.com/ryntab/Directus-Mailer).
+
+## Contributors
+
+- [javargasm](https://github.com/javargasm)
