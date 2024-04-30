@@ -1,9 +1,9 @@
-import { OperationApiConfig } from "@directus/extensions";
-import { Attachment, MailMessage, Options, StreamAttachment } from "./_types";
-import { md } from "./utils/md";
+import { OperationApiConfig } from '@directus/extensions';
+import { Attachment, MailMessage, Options, StreamAttachment } from './_types';
+import { md } from './utils/md';
 
 const config: OperationApiConfig<Options> = {
-  id: "mailer",
+  id: 'mailer',
   // @ts-ignore
   handler: async (options, context) => {
     const { AssetsService, MailService } = context.services;
@@ -56,17 +56,17 @@ const config: OperationApiConfig<Options> = {
       if (payload.subject) mail.subject = payload.subject;
 
       const safeBody =
-        typeof payload.body !== "string"
+        typeof payload.body !== 'string'
           ? JSON.stringify(payload.body)
           : payload.body;
 
-      if (payload.type === "template") {
+      if (payload.type === 'template') {
         mail.template = {
-          name: payload.template || "base",
+          name: payload.template || 'base',
           data: payload.data || {},
         };
       } else {
-        mail.html = payload.type === "wysiwyg" ? safeBody : md(safeBody);
+        mail.html = payload.type === 'wysiwyg' ? safeBody : md(safeBody);
       }
       mail.attachments = payload.attachments;
 
