@@ -1,8 +1,9 @@
-import { OperationApiConfig } from '@directus/extensions';
-import { Attachment, MailMessage, Options, StreamAttachment } from './_types';
+import { OperationApiConfig } from "@directus/extensions";
+import { Attachment, MailMessage, Options, StreamAttachment } from "./_types";
+import { md } from "./utils/md";
 
 const config: OperationApiConfig<Options> = {
-  id: 'mailer',
+  id: "mailer",
   // @ts-ignore
   handler: async (options, context) => {
     const { AssetsService, MailService } = context.services;
@@ -25,7 +26,9 @@ const config: OperationApiConfig<Options> = {
       let streamAttachments: StreamAttachment[] = new Array();
 
       // Resolve all streams to an array
-      streamAttachments = await Promise.all(fileIds.map((id) => assetsService.getAsset(id, {})));
+      streamAttachments = await Promise.all(
+        fileIds.map((id) => assetsService.getAsset(id, {}))
+      );
 
       // Create attachment objects from streams
       streamAttachments.forEach((asset) => {
@@ -51,11 +54,19 @@ const config: OperationApiConfig<Options> = {
       if (payload.bcc) mail.bcc = payload.bcc;
       if (payload.replyTo) mail.replyTo = payload.replyTo;
       if (payload.subject) mail.subject = payload.subject;
-      if (payload.template) {
+
+      const safeBody =
+        typeof payload.body !== "string"
+          ? JSON.stringify(payload.body)
+          : payload.body;
+
+      if (payload.type === "template") {
         mail.template = {
-          name: payload.template,
-          data: payload.data,
+          name: payload.template || "base",
+          data: payload.data || {},
         };
+      } else {
+        mail.html = payload.type === "wysiwyg" ? safeBody : md(safeBody);
       }
       mail.attachments = payload.attachments;
 
