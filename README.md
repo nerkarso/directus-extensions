@@ -4,6 +4,37 @@
 
 Collection of Directus extensions.
 
+## Available Extensions
+
+### Bundles
+
+- [SweetAlert](bundles/sweetalert/README.md)
+
+### Displays
+
+- [Date Formatter](displays/date-formatter/README.md)
+
+### Endpoints
+
+- [File Preview](endpoints/file-preview/README.md)
+
+### Hooks
+
+- [Current Role](hooks/current-role/README.md)
+
+### Interfaces
+
+- [Spacer](interfaces/spacer/README.md)
+
+### Operations
+
+- [Firebase Messaging](operations/firebase-messaging/README.md)
+- [Mailer](operations/mailer/README.md)
+
+### Themes
+
+- [Sleek Dark](themes/sleek-dark/README.md)
+
 ## Installation
 
 1. Open the terminal in your Directus project.
