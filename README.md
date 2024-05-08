@@ -18,7 +18,7 @@ npm install directus-extension-<extension-name>
 The easiest way to start developing extensions is to use the `create-directus-extension` utility:
 
 ```sh
-npx create-directus-extension
+pnpx create-directus-extension
 ```
 
 After specifying the name of the extension, the type of the extension and the programming language you want to use, the utility will create a folder with the recommended file structure to create an extension.
@@ -28,7 +28,7 @@ After specifying the name of the extension, the type of the extension and the pr
 Use the `watch` script when developing your extension because it rebuilds your source code whenever a file has changed.
 
 ```sh
-npm run watch
+pnpm watch
 ```
 
 ## Building
@@ -36,7 +36,7 @@ npm run watch
 Before your extension can be used by Directus, it has to be built. If you used the `create-directus-extension` utility to scaffold your extension, building your extension is as easy as running:
 
 ```sh
-npm run build
+pnpm build
 ```
 
 ## Publishing
@@ -46,7 +46,7 @@ npm run build
 2. Build the package:
 
 ```sh
-npm run build
+pnpm build
 ```
 
 3. Publish the package:
