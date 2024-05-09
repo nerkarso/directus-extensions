@@ -1,0 +1,49 @@
+{
+  "name": "directus-extension-pdf-filled-viewer-endpoint",
+  "description": "View a filled PDF file from an endpoint",
+  "icon": "extension",
+  "version": "0.1.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-endpoint"
+  ],
+  "homepage": "https://github.com/nerkarso/directus-extensions/tree/master/endpoints/pdf-filled-viewer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerkarso/directus-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nerkarso/directus-extensions/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "endpoint",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link"
+  },
+  "devDependencies": {
+    "@directus/extensions": "^1.0.4",
+    "@directus/extensions-sdk": "11.0.4",
+    "@types/node": "^20.12.11",
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1"
+  }
+}
