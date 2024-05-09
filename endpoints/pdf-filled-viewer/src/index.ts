@@ -93,6 +93,7 @@ const endpoint: EndpointConfig = {
         query: req.query,
         form: pdfForm,
         fields: pdfFields,
+        settings,
         createItemsService,
         logFields,
         updateFilename,
