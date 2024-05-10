@@ -26,5 +26,5 @@ npm install directus-extension-file-preview-endpoint
 **Example:**
 
 ```sh
-http://example.com/file-preview/33461458-ed8b-4917-9f74-318ef4731ddf.png
+http://localhost:8055/file-preview/33461458-ed8b-4917-9f74-318ef4731ddf.png
 ```
