@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# file-preview-endpoint
+# File Preview
 
 This endpoint allows you to preview files stored in Directus.
 This is useful when you want to preview an image or PDF in the Live Preview.
