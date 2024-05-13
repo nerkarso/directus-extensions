@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# current-role-hook
+# Current Role
 
 This hook injects the current user ID and role in the body element of the Data Studio.
 This is useful when you want to apply custom CSS to a specific user or role.
@@ -34,3 +34,4 @@ body[data-user-role="..."] {
 ## Known Issues
 
 - After installing the extension, you'll have to restart Directus for the extension to work.
+- HTML attributes aren't injected after logging in because, upon initial load, the request to retrieve the user would be unauthenticated.
