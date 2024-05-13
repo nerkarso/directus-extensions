@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# firebase-messaging-operation
+# Firebase Messaging
 
 Custom operation to send messages with Firebase.
 
@@ -16,10 +16,16 @@ Custom operation to send messages with Firebase.
 npm install directus-extension-firebase-messaging-operation
 ```
 
-2. Add these environment variables:
+2. Download the `google-services.json` file from Google Cloud and add it to the root of Directus.
+
+3. Or upload it via the Data Studio and copy the `Filename (Disk)`.
+
+4. Add this environment variable:
 
 ```sh
 GOOGLE_APPLICATION_CREDENTIALS="./google-services.json"
+# OR
+GOOGLE_APPLICATION_CREDENTIALS="./uploads/<uuid>.json"
 ```
 
 ## Known Issues
