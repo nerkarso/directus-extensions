@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# mailer-operation
+# Mailer
 
 Custom operation to send emails. It uses the Directus Nodemailer service and provides more options than the built-in mail operation.
 
