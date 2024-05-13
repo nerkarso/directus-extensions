@@ -2,7 +2,7 @@
   "name": "directus-extension-pdf-filled-viewer-endpoint",
   "description": "View a filled PDF file from an endpoint",
   "icon": "extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "directus",
     "directus-extension",
