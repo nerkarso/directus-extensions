@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# spacer-interface
+# Spacer
 
 Add empty spaces in your forms.
 
