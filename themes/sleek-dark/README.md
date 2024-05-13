@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# sleek-dark-theme
+# Sleek Dark
 
 Sleek dark theme for Directus.
 
