@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# PDF Filled Viewer Endpoint
+# PDF Filled Viewer
 
 This endpoint allows you to view a filled PDF file in Directus.
 

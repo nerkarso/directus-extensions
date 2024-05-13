@@ -2,7 +2,7 @@
   "name": "directus-extension-pdf-filled-viewer-endpoint",
   "description": "View a filled PDF file from an endpoint",
   "icon": "extension",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "keywords": [
     "directus",
     "directus-extension",
@@ -31,6 +31,10 @@
     "dev": "directus-extension build -w --no-minify",
     "link": "directus-extension link"
   },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1"
+  },
   "devDependencies": {
     "@directus/extensions": "^1.0.4",
     "@directus/extensions-sdk": "11.0.4",
@@ -41,9 +45,5 @@
     "overrides": {
       "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
     }
-  },
-  "dependencies": {
-    "@pdf-lib/fontkit": "^1.1.1",
-    "pdf-lib": "^1.17.1"
   }
 }
