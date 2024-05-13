@@ -1,6 +1,6 @@
 <p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
 
-# sweetalert-bundle
+# SweetAlert
 
 Simple way to show a SweetAlert.
 
