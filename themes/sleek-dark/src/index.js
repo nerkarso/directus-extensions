@@ -15,7 +15,7 @@ const theme = {
           padding: '0.25rem 0.75rem',
         },
       },
-      rowGap: '1.5rem',
+      rowGap: '2rem',
     },
     navigation: {
       background: 'transparent',
