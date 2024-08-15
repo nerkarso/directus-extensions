@@ -175,6 +175,27 @@ const config: OperationAppConfig = {
           },
         },
       },
+      {
+        field: 'data',
+        name: 'Message Data',
+        type: 'json',
+        meta: {
+          width: 'full',
+          interface: 'input-code',
+          note: 'Extra data to include in the message.',
+          options: {
+            language: 'json',
+            placeholder: JSON.stringify(
+              {
+                key1: "value1",
+                key2: "value2",
+              },
+              null,
+              2
+            ),
+          },
+        },
+      },
     ];
   },
 };
