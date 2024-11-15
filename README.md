@@ -85,3 +85,7 @@ pnpm build
 ```sh
 npm publish --access=public
 ```
+
+## License
+
+[MIT License](LICENSE)
