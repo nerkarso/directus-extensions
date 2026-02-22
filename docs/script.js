@@ -4,7 +4,7 @@ const itemsEmptyTemplate = document.getElementById('itemsEmptyTemplate');
 const itemsContainer = document.getElementById('itemsContainer');
 const itemsTotalContainer = document.getElementById('itemsTotalContainer');
 
-const PROXY_URL = 'https://proxy.ngineer.workers.dev';
+const PROXY_URL = 'https://ngxproxy2.onrender.com';
 const API_URL = `${PROXY_URL}/https://registry.directus.io/extensions`;
 
 // Show spinner
