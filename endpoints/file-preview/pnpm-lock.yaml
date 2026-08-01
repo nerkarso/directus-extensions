@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  unhead: '>=2.1.13'
+  '@unhead/vue': '>=2.1.13'
+  joi: '>=18.2.1'
+
 importers:
 
   .:
@@ -13,7 +18,7 @@ importers:
         version: 4.0.2(knex@3.1.0)(vue@3.5.24(typescript@7.0.2))
       '@directus/extensions-sdk':
         specifier: 18.0.2
-        version: 18.0.2(@types/node@26.1.2)(@unhead/vue@1.11.20(vue@3.5.24(typescript@7.0.2)))(knex@3.1.0)(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(terser@5.49.0)(typescript@7.0.2)
+        version: 18.0.2(@types/node@26.1.2)(@unhead/vue@1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2)))(knex@3.1.0)(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(terser@5.49.0)(typescript@7.0.2)
       '@types/node':
         specifier: ^26.1.2
         version: 26.1.2
@@ -89,7 +94,7 @@ packages:
   '@directus/themes@2.0.2':
     resolution: {integrity: sha512-97VQsxq8Vc2cqwo8773OicgTCWE3IGefq+X+/pQfRwIdXTbcAv7KhBGZhgZuht7Wlju+v+4N6rVt8ujeXOmFrA==}
     peerDependencies:
-      '@unhead/vue': 1.11.20
+      '@unhead/vue': '>=2.1.13'
       pinia: 2.3.1
       vue: 3.5.24
 
@@ -460,6 +465,9 @@ packages:
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
+
+  '@jridgewell/remapping@2.3.5':
+    resolution: {integrity: sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==}
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -976,9 +984,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@unhead/dom@1.11.20':
-    resolution: {integrity: sha512-jgfGYdOH+xHJF/j8gudjsYu3oIjFyXhCWcgKaw3vQnT616gSqyqnGQGOItL+BQtQZACKNISwIfx5PuOtztMKLA==}
-
   '@unhead/schema@1.11.20':
     resolution: {integrity: sha512-0zWykKAaJdm+/Y7yi/Yds20PrUK7XabLe9c3IRcjnwYmSWY6z0Cr19VIs3ozCj8P+GhR+/TI2mwtGlueCEYouA==}
 
@@ -1428,6 +1433,9 @@ packages:
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
+  hookable@6.1.1:
+    resolution: {integrity: sha512-U9LYDy1CwhMCnprUfeAZWZGByVbhd54hwepegYTK7Pi5NvqEj63ifz5z+xukznehT7i6NIZRu89Ay1AZmRsLEQ==}
+
   https-proxy-agent@5.0.1:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
@@ -1507,8 +1515,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  joi@18.0.1:
-    resolution: {integrity: sha512-IiQpRyypSnLisQf3PwuN2eIHAsAIGZIrLZkd4zdvIar2bDyhM91ubRjy8a3eYablXsh9BeI/c7dmPYHca5qtoA==}
+  joi@18.2.3:
+    resolution: {integrity: sha512-N5A3KTWQpPWT4ExxxPlUx7WmykGXRzhNidWhV41d6Abu9YfI2NyWCJuxdPnslJCPWtbRpSVOWSnSS6GakLM/Rg==}
     engines: {node: '>= 20'}
 
   js-tokens@4.0.0:
@@ -2162,8 +2170,13 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
-  unhead@1.11.20:
-    resolution: {integrity: sha512-3AsNQC0pjwlLqEYHLjtichGWankK8yqmocReITecmpB1H0aOabeESueyy+8X1gyJx4ftZVwo9hqQ4O3fPWffCA==}
+  unhead@3.2.3:
+    resolution: {integrity: sha512-BBkKvthUOufEJzG4C4u5NCdxnGMNaQdb//oPDI8lkv/6qj0faEqnPIvIPejt3FnSE501LX25Gbe2MVgKDuFnyQ==}
+    peerDependencies:
+      vite: '>=6.4.2'
+    peerDependenciesMeta:
+      vite:
+        optional: true
 
   unicorn-magic@0.3.0:
     resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
@@ -2176,6 +2189,39 @@ packages:
   unplugin-utils@0.2.5:
     resolution: {integrity: sha512-gwXJnPRewT4rT7sBi/IvxKTjsms7jX7QIDLOClApuZwR49SXbrB1z2NLUZ+vDHyqCj/n58OzRRqaW+B8OZi8vg==}
     engines: {node: '>=18.12.0'}
+
+  unplugin@3.3.0:
+    resolution: {integrity: sha512-qa66K+crbfyE6JK10GjvbJeRrOsuC/JpbnHctfyp/i4oBTxWOzJfRZyDiOk1PtErMFRu8JhsU/wPvOdBNWe5Rg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@farmfe/core': '*'
+      '@rspack/core': '*'
+      bun-types-no-globals: '*'
+      esbuild: '*'
+      rolldown: '*'
+      rollup: '*'
+      unloader: '*'
+      vite: '*'
+      webpack: '*'
+    peerDependenciesMeta:
+      '@farmfe/core':
+        optional: true
+      '@rspack/core':
+        optional: true
+      bun-types-no-globals:
+        optional: true
+      esbuild:
+        optional: true
+      rolldown:
+        optional: true
+      rollup:
+        optional: true
+      unloader:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
 
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
@@ -2248,6 +2294,9 @@ packages:
       typescript:
         optional: true
 
+  webpack-virtual-modules@0.6.2:
+    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
+
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -2311,12 +2360,12 @@ snapshots:
 
   '@directus/constants@14.4.1': {}
 
-  '@directus/extensions-sdk@18.0.2(@types/node@26.1.2)(@unhead/vue@1.11.20(vue@3.5.24(typescript@7.0.2)))(knex@3.1.0)(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(terser@5.49.0)(typescript@7.0.2)':
+  '@directus/extensions-sdk@18.0.2(@types/node@26.1.2)(@unhead/vue@1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2)))(knex@3.1.0)(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(terser@5.49.0)(typescript@7.0.2)':
     dependencies:
       '@directus/composables': 11.6.0(vue@3.5.24(typescript@7.0.2))
       '@directus/constants': 14.4.1
       '@directus/extensions': 4.0.2(knex@3.1.0)(vue@3.5.24(typescript@7.0.2))
-      '@directus/themes': 2.0.2(@unhead/vue@1.11.20(vue@3.5.24(typescript@7.0.2)))(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(vue@3.5.24(typescript@7.0.2))
+      '@directus/themes': 2.0.2(@unhead/vue@1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2)))(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(vue@3.5.24(typescript@7.0.2))
       '@directus/types': 16.1.0(knex@3.1.0)(vue@3.5.24(typescript@7.0.2))
       '@directus/utils': 13.5.2(vue@3.5.24(typescript@7.0.2))
       '@rollup/plugin-commonjs': 28.0.9(rollup@4.59.0)
@@ -2418,10 +2467,10 @@ snapshots:
 
   '@directus/system-data@4.6.0': {}
 
-  '@directus/themes@2.0.2(@unhead/vue@1.11.20(vue@3.5.24(typescript@7.0.2)))(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(vue@3.5.24(typescript@7.0.2))':
+  '@directus/themes@2.0.2(@unhead/vue@1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2)))(pinia@2.3.1(typescript@7.0.2)(vue@3.5.24(typescript@7.0.2)))(vue@3.5.24(typescript@7.0.2))':
     dependencies:
       '@directus/utils': 13.5.2(vue@3.5.24(typescript@7.0.2))
-      '@unhead/vue': 1.11.20(vue@3.5.24(typescript@7.0.2))
+      '@unhead/vue': 1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2))
       decamelize: 6.0.1
       flat: 6.0.1
       lodash-es: 4.18.1
@@ -2460,7 +2509,7 @@ snapshots:
       date-fns: 4.1.0
       fs-extra: 11.3.2
       ipaddr.js: 2.4.0
-      joi: 18.0.1
+      joi: 18.2.3
       js-yaml: 4.3.0
       lodash-es: 4.18.1
       micromustache: 8.0.3
@@ -2706,6 +2755,11 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/trace-mapping': 0.3.31
+
+  '@jridgewell/remapping@2.3.5':
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/resolve-uri@3.1.2': {}
@@ -3053,11 +3107,6 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@unhead/dom@1.11.20':
-    dependencies:
-      '@unhead/schema': 1.11.20
-      '@unhead/shared': 1.11.20
-
   '@unhead/schema@1.11.20':
     dependencies:
       hookable: 5.5.3
@@ -3068,13 +3117,23 @@ snapshots:
       '@unhead/schema': 1.11.20
       packrup: 0.1.2
 
-  '@unhead/vue@1.11.20(vue@3.5.24(typescript@7.0.2))':
+  '@unhead/vue@1.11.20(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2))':
     dependencies:
       '@unhead/schema': 1.11.20
       '@unhead/shared': 1.11.20
       hookable: 5.5.3
-      unhead: 1.11.20
+      unhead: 3.2.3(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))
       vue: 3.5.24(typescript@7.0.2)
+    transitivePeerDependencies:
+      - '@farmfe/core'
+      - '@rspack/core'
+      - bun-types-no-globals
+      - esbuild
+      - rolldown
+      - rollup
+      - unloader
+      - vite
+      - webpack
 
   '@vitejs/plugin-vue@6.0.1(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))(vue@3.5.24(typescript@7.0.2))':
     dependencies:
@@ -3543,6 +3602,8 @@ snapshots:
 
   hookable@5.5.3: {}
 
+  hookable@6.1.1: {}
+
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
@@ -3607,7 +3668,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  joi@18.0.1:
+  joi@18.2.3:
     dependencies:
       '@hapi/address': 5.1.1
       '@hapi/formula': 3.0.2
@@ -4251,12 +4312,21 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  unhead@1.11.20:
+  unhead@3.2.3(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0)):
     dependencies:
-      '@unhead/dom': 1.11.20
-      '@unhead/schema': 1.11.20
-      '@unhead/shared': 1.11.20
-      hookable: 5.5.3
+      hookable: 6.1.1
+      unplugin: 3.3.0(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0))
+    optionalDependencies:
+      vite: 8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0)
+    transitivePeerDependencies:
+      - '@farmfe/core'
+      - '@rspack/core'
+      - bun-types-no-globals
+      - esbuild
+      - rolldown
+      - rollup
+      - unloader
+      - webpack
 
   unicorn-magic@0.3.0: {}
 
@@ -4266,6 +4336,17 @@ snapshots:
     dependencies:
       pathe: 2.0.3
       picomatch: 4.0.5
+
+  unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.59.0)(vite@8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0)):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      picomatch: 4.0.5
+      webpack-virtual-modules: 0.6.2
+    optionalDependencies:
+      esbuild: 0.28.1
+      rolldown: 1.1.5
+      rollup: 4.59.0
+      vite: 8.1.2(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.49.0)
 
   update-browserslist-db@1.2.3(browserslist@4.28.7):
     dependencies:
@@ -4301,6 +4382,8 @@ snapshots:
       '@vue/shared': 3.5.24
     optionalDependencies:
       typescript: 7.0.2
+
+  webpack-virtual-modules@0.6.2: {}
 
   which@2.0.2:
     dependencies:

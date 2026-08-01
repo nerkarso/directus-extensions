@@ -3,6 +3,13 @@ allowBuilds:
   esbuild: true
   protobufjs: true
   vue-demi: true
+
+overrides:
+  unhead: '>=2.1.13'
+  '@unhead/vue': '>=2.1.13'
+  joi: '>=18.2.1'
+  uuid: '>=11.1.1'
+
 minimumReleaseAgeExclude:
   - vite@4.5.3
   - protobufjs@7.2.5

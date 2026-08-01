@@ -1,6 +1,12 @@
 allowBuilds:
   esbuild: true
   vue-demi: true
+
+overrides:
+  unhead: '>=2.1.13'
+  '@unhead/vue': '>=2.1.13'
+  joi: '>=18.2.1'
+
 minimumReleaseAgeExclude:
   - vite@4.5.3
   - axios@1.7.4
