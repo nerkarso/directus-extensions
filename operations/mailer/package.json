@@ -38,32 +38,15 @@
     "link": "directus-extension link"
   },
   "dependencies": {
-    "dompurify": "^3.1.2",
-    "marked": "^12.0.2"
+    "dompurify": "^3.4.12",
+    "marked": "^18.0.7"
   },
   "devDependencies": {
-    "@directus/extensions": "^1.0.2",
-    "@directus/extensions-sdk": "11.0.2",
-    "@types/dompurify": "^3.0.5",
-    "@types/node": "^20.12.7",
-    "typescript": "^5.4.5",
-    "vue": "^3.4.21"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite@>=4.0.0 <=4.5.2": ">=4.5.3",
-      "axios@>=1.3.2 <=1.7.3": ">=1.7.4",
-      "rollup@>=3.0.0 <3.29.5": ">=3.29.5",
-      "esbuild@<=0.24.2": ">=0.25.0",
-      "@directus/types@>=11.0.7 <13.0.0": ">=13.0.0",
-      "tmp@<=0.2.3": ">=0.2.4",
-      "nanoid@>=4.0.0 <5.0.9": ">=5.0.9",
-      "axios@>=1.0.0 <1.8.2": ">=1.8.2",
-      "axios@>=1.0.0 <1.12.0": ">=1.12.0",
-      "lodash-es@>=4.0.0 <=4.17.22": ">=4.17.23",
-      "js-yaml@>=4.0.0 <4.1.1": ">=4.1.1",
-      "axios@>=1.0.0 <=1.13.4": ">=1.13.5",
-      "minimatch@<10.2.1": ">=10.2.1"
-    }
+    "@directus/extensions": "^4.0.2",
+    "@directus/extensions-sdk": "18.0.2",
+    "@types/dompurify": "^3.2.0",
+    "@types/node": "^26.1.2",
+    "typescript": "^7.0.2",
+    "vue": "^3.5.40"
   }
 }
