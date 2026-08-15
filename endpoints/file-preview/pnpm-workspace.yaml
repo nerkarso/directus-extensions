@@ -3,6 +3,9 @@ allowBuilds:
   vue-demi: true
 
 overrides:
+  js-yaml: '>=4.3.1 <5.0.0'
+  nanoid: '>=5.1.16'
+  postcss>nanoid: '>=3.3.18 <4.0.0'
   unhead: '>=2.1.13'
   '@unhead/vue': '>=2.1.13'
   joi: '>=18.2.1'
